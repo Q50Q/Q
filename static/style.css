@@ -1,0 +1,118 @@
+#matrix-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#matrix-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Ensure Streamlit elements are visible over the canvas */
+.stApp {
+  background-color: transparent !important;
+}
+
+/* Make the streamlit content container have a semi-transparent background */
+.block-container {
+  background-color: rgba(25, 25, 25, 0.85);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* Make sure text is visible on the dark background */
+h1, h2, h3, p, .stMarkdown, .stDataFrame {
+  color: #FFFFFF !important;
+}
+
+/* Improved button styling */
+.stButton > button {
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.stButton > button:hover {
+  background-color: #2980b9;
+  color: white;
+}
+
+/* Style headers */
+h1, h2, h3 {
+  font-weight: 700;
+  color: #FFFFFF !important;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* Improve metric styling for the dark theme */
+.stMetric {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 10px;
+  border-left: 4px solid #2980b9;
+}
+
+/* Enhance tab styling */
+.stTabs [data-baseweb="tab-list"] {
+  gap: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.stTabs [data-baseweb="tab"] {
+  height: 40px;
+  white-space: pre-wrap;
+  background-color: rgba(28, 28, 28, 0.8);
+  border-radius: 5px;
+  color: white;
+  padding: 0 10px;
+}
+
+.stTabs [aria-selected="true"] {
+  background-color: rgba(41, 128, 185, 0.8) !important;
+  color: white !important;
+}
+
+/* Add some glow to elements to enhance the Matrix theme */
+.stButton > button, .stSelectbox, .stMultiselect {
+  box-shadow: 0 0 5px rgba(0, 255, 65, 0.3);
+}
+
+/* Add green accent to match Matrix theme */
+.stProgress > div > div > div > div {
+  background-color: #00FF41 !important;
+}
+
+/* Matrix-style scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 65, 0.4);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 65, 0.6);
+}

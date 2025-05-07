@@ -1,0 +1,124 @@
+.terminal-container {
+    background-color: #0D0208;
+    color: #00FF41;
+    font-family: 'Courier New', monospace;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-y: auto;
+    height: 600px;
+    width: 100%; 
+    max-width: 100%;
+    border: 1px solid #00FF41;
+    box-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.terminal-container p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.terminal-container .command {
+    color: #00FFFF;
+}
+
+.terminal-container .highlight {
+    color: #FF00FF;
+    font-weight: bold;
+}
+
+.terminal-container .error {
+    color: #FF3333;
+}
+
+.terminal-container .success {
+    color: #00FF41;
+}
+
+.terminal-header {
+    background-color: #003B00;
+    padding: 5px 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #00FF41;
+    margin-bottom: 5px;
+}
+
+.terminal-title {
+    font-weight: bold;
+    color: #FFFFFF;
+}
+
+.terminal-buttons {
+    display: flex;
+}
+
+.terminal-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.terminal-button.red {
+    background-color: #FF5F56;
+}
+
+.terminal-button.yellow {
+    background-color: #FFBD2E;
+}
+
+.terminal-button.green {
+    background-color: #27C93F;
+}
+
+.terminal-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 15px;
+    background-color: #00FF41;
+    margin-left: 5px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Terminal prompt style */
+.terminal-prompt {
+    color: #00FFFF;
+}
+
+.terminal-prompt::before {
+    content: "$ ";
+    color: #00FF41;
+}
+
+/* For scrollbar styling */
+.terminal-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.terminal-container::-webkit-scrollbar-track {
+    background: #0D0208;
+}
+
+.terminal-container::-webkit-scrollbar-thumb {
+    background-color: #00FF41;
+    border-radius: 4px;
+}
+
+.terminal-container::-webkit-scrollbar-thumb:hover {
+    background-color: #00FFFF;
+}
